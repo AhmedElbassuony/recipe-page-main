@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap');
+
+
+:root {
+  --Stone-100: hsl(30, 54%, 90%);
+  --Stone-150: hsl(30, 18%, 87%);
+  --Stone-600: hsl(30, 10%, 34%);
+  --Stone-900: hsl(24, 5%, 18%);
+  --Brown-800: hsl(14, 45%, 36%);
+  --Rose-800: hsl(332, 51%, 32%);
+  --Rose-50: hsl(330, 100%, 98%);
+  --Young: "Young Serif", serif;
+  --Outfit: "Outfit", serif;
+}
+
+* {
+  font-family: var(--Outfit);
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2 {
+  font-family: var(--Young);
+}
+
+body {
+  background-color: var(--Stone-100);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+main {
+  background-color: white;
+  width: 500px;
+  padding: 25px;
+  border-radius: 10px;
+}
+
+@media(max-width:500px) {
+  main {
+    width: 100%;
+  }
+
+  body {
+    padding: 0;
+  }
+}
+
+figure {
+  width: 100%;
+  height: 200px;
+  background-image: url("images/image-omelette.jpeg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-weight: normal;
+  margin-bottom: 10px;
+  font-size: 1.7rem;
+}
+
+p {
+  margin-bottom: 20px;
+  font-size: 11px;
+  color: var(--Stone-600);
+}
+
+.prep {
+  background-color: var(--Rose-50);
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.prep h3 {
+  margin-bottom: 10px;
+  color: var(--Rose-800);
+}
+
+.prep ul {
+  margin-left: 30px;
+}
+
+.prep ul li {
+  margin-bottom: 10px;
+  color: var(--Stone-600);
+  font-size: 14px;
+  padding-left: 15px;
+}
+
+.prep ul li::marker {
+  color: var(--Rose-800);
+  font-size: 12px;
+}
+
+.ingredients {
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid var(--Stone-150);
+}
+
+h2 {
+  color: var(--Brown-800);
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.ingredients ul {
+  margin-left: 30px;
+}
+
+.ingredients ul li {
+  margin-bottom: 10px;
+  padding-left: 15px;
+  font-size: 10px;
+  color: var(--Stone-600);
+}
+
+.ingredients ul li::marker {
+  color: var(--Brown-800);
+}
+
+.instructions {
+  border-bottom: 1px solid var(--Stone-150);
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  counter-reset: instruction;
+}
+
+.instructions p {
+  counter-increment: instruction;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 10px;
+}
+
+.instructions p::before {
+  content: counter(instruction)". ";
+  font-weight: bold;
+  color: var(--Brown-800);
+  position: absolute;
+  left: 5px;
+}
+
+summary table {
+  width: 100%;
+}
+
+summary td {
+  padding: 10px;
+  border-bottom: 1px solid var(--Stone-150);
+  color: var(--Stone-600);
+  font-size: 14px;
+}
+
+summary td:last-child {
+  color: var(--Brown-800);
+  font-weight: bold;
+}
+
+summary tr:last-child td {
+  border: none;
+}
